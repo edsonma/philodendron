@@ -86,7 +86,7 @@ GEM
       sorted_set
       tzinfo
     cancancan (3.3.0)
-    capybara (3.36.0)
+    capybara (3.38.0)
       addressable
       matrix
       mini_mime (>= 0.1.3)
