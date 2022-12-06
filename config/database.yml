@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: uluru_development
+  host: localhost
+  
+test:
+  <<: *default
+  database: uluru_test
+  host: localhost
+
+staging:
+  <<: *default  
+  url: <%= ENV['DATABASE_URL'] %>
+
+production:
+  <<: *default  
+  url: <%= ENV['DATABASE_URL'] %>

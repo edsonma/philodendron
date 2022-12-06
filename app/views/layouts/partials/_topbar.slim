@@ -1,0 +1,31 @@
+.navbar-custom style="background-color: #{top_bar_color};"
+  ul.list-unstyled.topnav-menu.float-right.mb-0
+    li.dropdown.notification-list
+      / - if current_user.role_admin?
+        = link_to rails_admin_path, class:'nav-link right-bar-toggle waves-effect waves-light' do
+          span
+            | Administração
+    li.dropdown.notification-list
+      / = link_to edit_user_registration_path do
+      /   .nav-link.nav-user.mr-0.waves-effect.waves-light
+      /     img.rounded-circle src=user_avatar_url
+      /     span.pro-user-name.ml-1
+      /       = current_user&.name
+      li.dropdown.notification-list
+        / = button_to destroy_user_session_path, method: 'delete', class:'nav-link right-bar-toggle btn-default waves-light purple-haze-button-logout', style:"background-color: #{top_bar_color};" do
+        /   span
+        /     | Sair
+  / .logo-box style="background-color: #{top_bar_color};"
+  /   a.logo.text-center[href="/"]
+  /     span.logo-lg
+  /       ruby:
+  /         logo_pb = company_logo_pb_url(current_user&.company)
+  /       = image_tag(logo_pb, class: 'company-top-logo')
+  /     span.logo-sm
+  /       ruby:
+  /         logo_sm = company_logo_sm_url(current_user&.company)
+  /       = image_tag(logo_sm, class: 'company-top-logo')
+  / ul.list-unstyled.topnav-menu.topnav-menu-left.m-0
+  /   li
+  /     button.button-menu-mobile.waves-effect.waves-light
+  /       i.fe-menu

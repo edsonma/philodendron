@@ -1,0 +1,10 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  insecure-external-code-execution: allow
+  schedule:
+    interval: daily
+    time: "02:00"
+    timezone: America/Sao_Paulo
+  open-pull-requests-limit: 5

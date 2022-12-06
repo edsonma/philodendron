@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta[name="robots" content="noindex, nofollow"]
+    meta[charset="utf-8"]
+    title
+      | Uluru
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    meta[content="Uluru" name="author"]
+    meta[http-equiv="X-UA-Compatible" content="IE=edge"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_importmap_tags
+  body
+    #wrapper
+      = render 'layouts/partials/topbar', top_bar_color: '#9AC5CC'
+      = render 'layouts/partials/left-sidebar'
+      .content-page
+        .content
+          = yield
+        = render 'layouts/partials/footer'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'

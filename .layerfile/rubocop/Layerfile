@@ -1,0 +1,4 @@
+FROM ../base/Layerfile
+
+BUILD ENV GIT_COMMIT
+RUN bundle exec rubocop

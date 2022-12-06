@@ -1,0 +1,6 @@
+---
+:concurrency: <%= ENV.fetch("SIDEKIQ_REDIS_POOL", 1) %>
+production:
+  :concurrency: <%= ENV.fetch("SIDEKIQ_REDIS_POOL", 1) %>
+:queues:
+  - default

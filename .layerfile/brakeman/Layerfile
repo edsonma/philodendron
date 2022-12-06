@@ -1,0 +1,3 @@
+FROM ../base/Layerfile
+
+RUN bundle exec brakeman

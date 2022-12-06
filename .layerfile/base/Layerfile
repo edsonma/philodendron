@@ -1,0 +1,58 @@
+FROM vm/ubuntu:18.04
+
+MEMORY 3G
+
+CACHE /var/cache/apt
+RUN apt-get update && \
+    apt-get install nginx curl gpg ca-certificates \
+       git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev \
+       libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev \
+       software-properties-common libffi-dev libpq-dev docker-compose cmake default-jdk \
+       imagemagick-6.q16 firefox postgresql postgresql-contrib libpq-dev
+       
+
+# Environment setup
+RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+ENV PATH=$HOME/.rbenv/bin:$PATH
+RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+
+RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+RUN echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+
+
+RUN rbenv install 3.1.0
+ENV PATH=$HOME/.rbenv/versions/3.1.0/bin:$PATH
+ENV RAILS_ENV=test
+
+RUN gem install pg
+
+ENV RAILS_ENV=development
+
+RUN sudo -u postgres createuser -s -i -d -r -l -w root
+RUN sudo -u postgres -H -- psql -t -c "CREATE DATABASE mydb;"
+RUN sudo -u postgres -H -- psql -c "ALTER ROLE root WITH PASSWORD 'password';"
+
+# Copy your rails app into the runner
+COPY ../../ .
+
+COPY ../../Gemfile .
+COPY ../../Gemfile.lock .
+
+# set up database
+RUN echo -e 'development:\n\
+  adapter: postgresql\n\
+  encoder: unicode\n\
+  database: mydb\n\
+  username: root\n\
+  password: password\n' > config/database.yml
+
+
+# run migrations
+RUN gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
+RUN bundle install
+RUN bundle exec rake db:migrate
+RUN bundle exec rake db:setup
+
+# Start the server
+RUN BACKGROUND rails server --binding 0.0.0.0
+EXPOSE WEBSITE localhost:3000

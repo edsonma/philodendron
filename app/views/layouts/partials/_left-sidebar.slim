@@ -1,0 +1,22 @@
+.left-side-menu
+  .slimscroll-menu
+    #sidebar-menu
+      ul#side-menu.metismenu
+        li.menu-title
+          | Navigation Bar
+        li
+          a.waves-effect
+            i.remixicon-calculator-line
+            span Invoice
+            span.menu-arrow
+          ul.nav-second-level.mm-collapse
+            li
+              = link_to root_path, class: 'waves-effect'
+                span
+                  |  Schedule
+
+            li
+              = link_to root_path, class: 'waves-effect'
+                span
+                  |  Transation
+    .clearfix

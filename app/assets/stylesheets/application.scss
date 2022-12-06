@@ -1,0 +1,136 @@
+/*
+Template Name: Minton - Responsive Bootstrap 4 Admin Dashboard
+Author: CoderThemes
+Version: 1.0.0
+Website: https://coderthemes.com/
+Contact: support@coderthemes.com
+File: Custom Bootstrap Css File
+*/
+
+//Core files
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "minton-4.0.0/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+
+//Components
+@import "minton-4.0.0/custom/components/accordions";
+@import "minton-4.0.0/custom/components/badge";
+@import "minton-4.0.0/custom/components/backgrounds";
+@import "minton-4.0.0/custom/components/breadcrumb";
+@import "minton-4.0.0/custom/components/buttons";
+@import "minton-4.0.0/custom/components/card";
+@import "minton-4.0.0/custom/components/dropdown";
+@import "minton-4.0.0/custom/components/forms";
+@import "minton-4.0.0/custom/components/modal";
+@import "minton-4.0.0/custom/components/nav";
+@import "minton-4.0.0/custom/components/pagination";
+@import "minton-4.0.0/custom/components/popover";
+@import "minton-4.0.0/custom/components/progress";
+@import "minton-4.0.0/custom/components/reboot";
+@import "minton-4.0.0/custom/components/tables";
+@import "minton-4.0.0/custom/components/type";
+
+/*
+Template Name: Minton - Responsive Bootstrap 4 Admin Dashboard
+Author: CoderThemes
+Version: 4.0.0
+Website: https://coderthemes.com/
+Contact: support@coderthemes.com
+File: Icons Css File
+*/
+
+// Plugins
+@import "minton-4.0.0/custom/plugins/icons";
+
+/*
+Template Name: Minton - Responsive Bootstrap 4 Admin Dashboard
+Author: CoderThemes
+Version: 4.0.0
+Website: https://coderthemes.com/
+Contact: support@coderthemes.com
+File: Main Css File
+*/
+
+
+//Fonts
+@import "minton-4.0.0/custom/fonts/fonts";
+
+//Core files
+@import "minton-4.0.0/variables";
+
+// Structure
+@import "minton-4.0.0/custom/structure/general";
+@import "minton-4.0.0/custom/structure/left-menu";
+@import "minton-4.0.0/custom/structure/topbar";
+@import "minton-4.0.0/custom/structure/page-head";
+@import "minton-4.0.0/custom/structure/footer";
+@import "minton-4.0.0/custom/structure/right-sidebar";
+@import "minton-4.0.0/custom/structure/layouts";
+
+//Components
+@import "minton-4.0.0/custom/components/helper";
+@import "minton-4.0.0/custom/components/social";
+@import "minton-4.0.0/custom/components/widgets";
+@import "minton-4.0.0/custom/components/custom-checkbox";
+@import "minton-4.0.0/custom/components/custom-radio";
+@import "minton-4.0.0/custom/components/ribbons";
+@import "minton-4.0.0/custom/components/print";
+@import "minton-4.0.0/custom/components/preloader";
+
+
+// Plugins
+@import "minton-4.0.0/custom/plugins/waves";
+@import "minton-4.0.0/custom/plugins/slimscroll";
+@import "minton-4.0.0/custom/plugins/toaster";
+@import "minton-4.0.0/custom/plugins/sweetalert";
+@import "minton-4.0.0/custom/plugins/nestable-list";
+@import "minton-4.0.0/custom/plugins/jstree";
+@import "minton-4.0.0/custom/plugins/ion-rangeslider";
+@import "minton-4.0.0/custom/plugins/bootstrap-tagsinput";
+@import "minton-4.0.0/custom/plugins/bootstrap-select";
+@import "minton-4.0.0/custom/plugins/multiple-select";
+@import "minton-4.0.0/custom/plugins/select2";
+@import "minton-4.0.0/custom/plugins/clockpicker";
+@import "minton-4.0.0/custom/plugins/datepicker";
+@import "minton-4.0.0/custom/plugins/daterange";
+@import "minton-4.0.0/custom/plugins/parsley";
+@import "minton-4.0.0/custom/plugins/summernote";
+@import "minton-4.0.0/custom/plugins/form-wizard";
+@import "minton-4.0.0/custom/plugins/quilljs-editor";
+@import "minton-4.0.0/custom/plugins/dropzone";
+@import "minton-4.0.0/custom/plugins/x-editable";
+@import "minton-4.0.0/custom/plugins/datatable";
+@import "minton-4.0.0/custom/plugins/tablesaw";
+@import "minton-4.0.0/custom/plugins/responsive-table";
+@import "minton-4.0.0/custom/plugins/footables";
+@import "minton-4.0.0/custom/plugins/flot";
+@import "minton-4.0.0/custom/plugins/apexcharts";
+@import "minton-4.0.0/custom/plugins/morris";
+@import "minton-4.0.0/custom/plugins/c3";
+@import "minton-4.0.0/custom/plugins/chartist";
+@import "minton-4.0.0/custom/plugins/sparkline-chart";
+@import "minton-4.0.0/custom/plugins/google-maps";
+@import "minton-4.0.0/custom/plugins/vector-maps";
+@import "minton-4.0.0/custom/plugins/mapeal-maps";
+@import "minton-4.0.0/custom/plugins/calendar";
+@import "minton-4.0.0/custom/plugins/hopscotch";
+@import "minton-4.0.0/custom/plugins/datepicker";
+
+// Pages
+@import "minton-4.0.0/custom/pages/components-demo";
+@import "minton-4.0.0/custom/pages/logout";
+@import "minton-4.0.0/custom/pages/error";
+@import "minton-4.0.0/custom/pages/email";
+@import "minton-4.0.0/custom/pages/taskboard";
+@import "minton-4.0.0/custom/pages/coming-soon";
+@import "minton-4.0.0/custom/pages/timeline";
+@import "minton-4.0.0/custom/pages/faq";
+@import "minton-4.0.0/custom/pages/pricing";
+@import "minton-4.0.0/custom/pages/gallery";
+
+@import "switchery";
+
+@import 'partials/components/*';

@@ -1,0 +1,4 @@
+FROM ../base/Layerfile
+
+RUN COVERAGE=true bundle exec rspec
+

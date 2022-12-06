@@ -1,0 +1,114 @@
+AllCops:
+  TargetRubyVersion: 3.1.0
+  NewCops: enable
+  Include:
+    - app/**/*.rb
+    - config/**/*.rb
+    - lib/**/*.rb
+    - spec/**/*.rb
+  Exclude:
+    -  bin/**/*
+    -  node_modules/**/*
+    -  vendor/**/*
+    - config/environments/development.rb
+    - config/environments/production.rb
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+Rails:
+  Enabled: true
+
+Rails/HttpPositionalArguments:
+  Enabled: true
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 100
+  Exclude:
+    - 'Gemfile'
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+    - config/routes.rb
+
+Metrics/ClassLength:
+  Max: 350
+
+Metrics/MethodLength:
+  Max: 30
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ModuleLength:
+  Max: 200
+
+Naming/FileName:
+  Exclude:
+    - 'bin/loose_scripts/*'
+    - 'Gemfile'
+
+Metrics/ParameterLists:
+  Max: 7
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
+
+Performance/Casecmp:
+  Enabled: true
+
+Performance/RedundantMerge:
+  Enabled: true
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/AccessModifierDeclarations:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/MethodDefParentheses:
+  Enabled: true
+  EnforcedStyle: require_parentheses
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+
+Style/NestedParenthesizedCalls:
+  Enabled: true
+
+Style/NegatedIf:
+  Enabled: true
+
+Style/ParallelAssignment:
+  Enabled: true
+
+Style/SingleArgumentDig:
+  Enabled: false
