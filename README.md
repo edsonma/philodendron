@@ -1,8 +1,6 @@
 # README
 
-Uluru (/ˌuːləˈruː/; Pitjantjatjara: Uluṟu [ˈʊlʊɻʊ]), also known as Ayers Rock (/ˈɛərz/ AIRS) and officially gazetted as Uluru / Ayers Rock,[1] is a large sandstone formation in the southern part of the Northern Territory in Australia.
-
-This boilerplate project helps when you need to start a new rails based project at any kickoff context.
+Philodendron is a large genus of flowering plants in the family Araceae. As of September 2015, the World Checklist of Selected Plant Families accepted 489 species;[2] other sources accept different numbers.[3][4] Regardless of number of species, the genus is the second-largest member of the family Araceae, after genus Anthurium. Taxonomically, the genus Philodendron is still poorly known, with many undescribed species. Many are grown as ornamental and indoor plants. The name derives from the Greek words philo- or "love, affection" and dendron or "tree". The generic name, Philodendron, is often used as the English name.
 
 ## Dependencies
 
